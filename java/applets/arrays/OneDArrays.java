@@ -2,7 +2,9 @@
 import javax.swing.JApplet;
 import javax.swing.SwingUtilities;
 import javax.swing.JLabel;
-
+/**
+ *  Example of One Dimentional Arrays, or just an Array.
+ */
 @SuppressWarnings("deprecation")
 public class OneDArrays extends JApplet {
     
