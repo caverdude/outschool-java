@@ -15,6 +15,7 @@ public class OneDArrays extends JApplet {
     
     //Called when this applet is loaded into the browser.
     public void init() {
+        System.out.println("test");
         //Execute a job on the event-dispatching thread; creating this applet's GUI.
         try {
             SwingUtilities.invokeAndWait(new Runnable() {
@@ -22,8 +23,22 @@ public class OneDArrays extends JApplet {
 
 
 
-                    JLabel lbl = new JLabel("Hello World");
+                    JLabel lbl = new JLabel("Planet name: " + planets[0]);
                     add(lbl);
+                    JLabel lbl2 = new JLabel("Planet name: " + planets[1]);
+                    add(lbl2);
+                    JLabel lbl3 = new JLabel("Planet name: " + planets[2]);
+                    add(lbl3);
+                    JLabel lbl4 = new JLabel("Planet name: " + planets[3]);
+                    add(lbl4);
+                    JLabel lbl5 = new JLabel("Planet name: " + planets[4]);
+                    add(lbl5);
+                    JLabel lbl6 = new JLabel("Planet name: " + planets[5]);
+                    add(lbl6);
+                    JLabel lbl7 = new JLabel("Planet name: " + planets[6]);
+                    add(lbl7);
+                    JLabel lbl8 = new JLabel("Planet name: " + planets[7]);
+                    add(lbl8);
                 }
             });
         } catch (Exception e) {
