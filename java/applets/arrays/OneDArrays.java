@@ -5,7 +5,7 @@ import javax.swing.JLabel;
 /**
  *  Example of One Dimentional Arrays, or just an Array.
  * Kyle Le
- *I love Java programming
+ * I love Java programming for days at a time.
  */
 @SuppressWarnings("deprecation")
 public class OneDArrays extends JApplet {
