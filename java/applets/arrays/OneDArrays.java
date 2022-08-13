@@ -22,7 +22,8 @@ public class OneDArrays extends JApplet {
     final int URANUS = 6;
     final int NEPTUNE = 7;
     final int PLUTO = 8;
-    final int ICON_SIZE = 115;
+    final int ICON_SIZE = Integer.valueOf(getParameter("IconSize"));
+    final String SPACE3 = "   ";
     String[] planets = { "Mercury", "Venus", "Earth", "Mars", "Jupitor", "Saturn", "Uranus", "Neptune", "Pluto" };
 
     /** Returns an ImageIcon, or null if the path was invalid. */
@@ -48,9 +49,6 @@ public class OneDArrays extends JApplet {
                     // ImageIcon iconLogo = new ImageIcon("Images/YourCompanyLogo.png");
                     // In init() method write this code
                     // jLabelYourCompanyLogo.setIcon(iconLogo);
-                    /*TODO: Make image icons for all 9 planets */
-                    /*TODO: Add Image Icons to Labels and add to grid in 2nd column */
-                    /*TODO: Make all 9 image files from earth.png */
                     /*TODO: Make images smaller or resizable when frame of applet is stretched */
                     
                     ImageIcon mercuryIcon  = createImageIcon("mercury.png",    "Planet Mercury");
@@ -90,8 +88,10 @@ public class OneDArrays extends JApplet {
                     JLabel imageLabel9 = new JLabel();
                     imageLabel9.setIcon(plutoIcon);
                     setLayout(new GridLayout(9, 2));
-                    JLabel lbl = new JLabel("Planet name: " + planets[MERCURY]);
-                    setEalignement(lbl);
+                    //TODO: Add SPACE3 to each label 
+                    //TODO: add setHorizontalAlignment to each label. 
+                    JLabel lbl = new JLabel("Planet name: " + planets[MERCURY]+SPACE3);
+                    lbl.setHorizontalAlignment(JLabel.RIGHT);
                     add(lbl);
                     add(imageLabel1);
                     JLabel lbl2 = new JLabel("Planet name: " + planets[VENUS]);
