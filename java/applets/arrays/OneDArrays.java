@@ -54,14 +54,23 @@ public class OneDArrays extends JApplet {
                     /*TODO: Make images smaller or resizable when frame of applet is stretched */
                     
                     ImageIcon mercuryIcon  = createImageIcon("mercury.png",    "Planet Mercury");
+                    mercuryIcon = new ImageIcon(mercuryIcon.getImage().getScaledInstance(75, 75, Image.SCALE_DEFAULT));
                     ImageIcon venusIcon  = createImageIcon("venus.png",    "Planet Venus");
+                    venusIcon = new ImageIcon(venusIcon.getImage().getScaledInstance(75, 75, Image.SCALE_DEFAULT));
                     ImageIcon earthIcon  = createImageIcon("earth.png",    "Planet Earth");
+                    earthIcon = new ImageIcon(earthIcon.getImage().getScaledInstance(75, 75, Image.SCALE_DEFAULT));
                     ImageIcon marsIcon  = createImageIcon("mars.png",    "Planet Mars");
+                    marsIcon = new ImageIcon(marsIcon.getImage().getScaledInstance(75, 75, Image.SCALE_DEFAULT));
                     ImageIcon jupiterIcon  = createImageIcon("jupiter.jpg",    "Planet Jupiter");
+                    jupiterIcon = new ImageIcon(jupiterIcon.getImage().getScaledInstance(75, 75, Image.SCALE_DEFAULT));
                     ImageIcon saturnIcon  = createImageIcon("saturn.jpg",    "Planet Saturn");
+                    saturnIcon = new ImageIcon(saturnIcon.getImage().getScaledInstance(75, 75, Image.SCALE_DEFAULT));
                     ImageIcon uranusIcon  = createImageIcon("uranus.jpg",    "Planet Uranus");
+                    uranusIcon = new ImageIcon(uranusIcon.getImage().getScaledInstance(75, 75, Image.SCALE_DEFAULT));
                     ImageIcon neptuneIcon  = createImageIcon("neptune.jpg",    "Planet Neptune");
+                    neptuneIcon = new ImageIcon(neptuneIcon.getImage().getScaledInstance(75, 75, Image.SCALE_DEFAULT));
                     ImageIcon plutoIcon  = createImageIcon("pluto.jpg",    "Planet Pluto");
+                    plutoIcon = new ImageIcon(plutoIcon.getImage().getScaledInstance(75, 75, Image.SCALE_DEFAULT));
                     JLabel imageLabel1 = new JLabel();
                     imageLabel1.setIcon(mercuryIcon);
                     JLabel imageLabel2 = new JLabel();
@@ -79,7 +88,7 @@ public class OneDArrays extends JApplet {
                     JLabel imageLabel8 = new JLabel();
                     imageLabel8.setIcon(neptuneIcon);
                     JLabel imageLabel9 = new JLabel();
-                    imageLabel8.setIcon(plutoIcon);
+                    imageLabel9.setIcon(plutoIcon);
                     setLayout(new GridLayout(9, 2));
                     JLabel lbl = new JLabel("Planet name: " + planets[MERCURY]);
                     add(lbl);
