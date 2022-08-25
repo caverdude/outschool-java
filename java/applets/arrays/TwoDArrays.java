@@ -5,6 +5,7 @@ import javax.swing.SwingUtilities;
 
 import java.awt.Image;
 import java.awt.Color;
+import java.awt.Graphics;
 import java.awt.image.*;
 import java.awt.GridLayout;
 import java.awt.Toolkit;
@@ -31,9 +32,9 @@ import java.awt.Toolkit;
  */
 @SuppressWarnings("deprecation")
 /**
- * 
+ *
  */
-public class TwoDArrays extends JApplet {
+public class TwoDArrays extends JApplet  {
     /** Returns an ImageIcon, or null if the path was invalid. */
     protected ImageIcon createImageIcon(String path,
             String description) {
@@ -62,9 +63,18 @@ public class TwoDArrays extends JApplet {
             SwingUtilities.invokeAndWait(new Runnable() {
                 public void run() {
                     setLayout(new GridLayout(8, 8));
-                    ImageIcon wKingIcon = createImageIcon("chess/bwset/white/wking.png", "White King");
-                    ImageIcon darkStoneIcon = createImageIcon("chess/boards/stoneDark1_60.png", "Dark Stone 60");
-                    ImageIcon lightStoneIcon = createImageIcon("chess/boards/stoneLight1_60.png", "Light Stone 60");
+                    Image wKingImage = 
+                        createImageIcon("chess/bwset/white/wking.png", 
+                            "White King").getImage();
+                    Image darkStoneImage = 
+                        createImageIcon("chess/boards/stoneDark1_60.png",
+                            "Dark Stone 60").getImage();
+                    Image lightStoneImage = 
+                        createImageIcon("chess/boards/stoneLight1_60.png", 
+                            "Light Stone 60").getImage();
+                    // color 75, 64, 250 transparent blue screen
+                    wKingImage = makeColorTransparent(wKingImage, 
+                            new Color(74,65,250));
                     for (int col = 0; col < 8; col++) {
                         for (int row = 0; row < 8; row++) {
                             
@@ -72,12 +82,22 @@ public class TwoDArrays extends JApplet {
                             // ImageIcon(mercuryIcon.getImage().getScaledInstance(ICON_SIZE, ICON_SIZE,
                             // Image.SCALE_DEFAULT));
                             JLabel wKing = new JLabel();
-                            wKing.setIcon(wKingIcon);
+                            BufferedImage image = 
+                                new BufferedImage(60,60,BufferedImage.TYPE_INT_RGB);
+                            Graphics imageGraphics = image.getGraphics();
+                            //imageGraphics.setPaintMode();
+                            imageGraphics.drawImage(darkStoneImage,
+                                0,0,null);
+                            imageGraphics.drawImage(wKingImage,
+                                5,5,null);
+                            ImageIcon tile = new ImageIcon(image);
+                            wKing.setIcon(tile);
                             // TODO:cut out the rest of the chess pieces
+
                             add(wKing);
                         }
                     }
-
+                    
                 }
             });
         } catch (Exception e) {
