@@ -84,14 +84,18 @@ public class TwoDArrays extends JApplet  {
                             JLabel wKing = new JLabel();
                             BufferedImage image = 
                                 new BufferedImage(60,60,BufferedImage.TYPE_INT_RGB);
+                            //ImageIcon tile = new ImageIcon(image);
+                            //wKing.setIcon(tile);
                             Graphics imageGraphics = image.getGraphics();
                             //imageGraphics.setPaintMode();
+                            
                             imageGraphics.drawImage(darkStoneImage,
                                 0,0,null);
                             imageGraphics.drawImage(wKingImage,
                                 5,5,null);
                             ImageIcon tile = new ImageIcon(image);
                             wKing.setIcon(tile);
+                            //wKing.setIcon(tile);
                             // TODO:cut out the rest of the chess pieces
 
                             add(wKing);
@@ -100,6 +104,8 @@ public class TwoDArrays extends JApplet  {
                     
                 }
             });
+            this.revalidate();
+            this.repaint();
         } catch (Exception e) {
             System.err.println("createGUI didn't complete successfully");
         }
