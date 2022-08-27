@@ -96,23 +96,32 @@ class TwoDArrayMatrixRotation {
 			}
 			col++;
 		}
-
+		System.out.println("\033[H\033[2J"); // clear console screen
 		/*  Print rotated matrix
 		 */
 		for (int i = 0; i < R; i++) {
 			for (int j = 0; j < C; j++)
-				System.out.print(mat[i][j] + " ");
+				System.out.print(mat[i][j]==0?" ":"*"); //tertiary opeartor
 			System.out.print("\n");
+
 		}
 	}
 
 	/* Driver program to test above functions */
 	public static void main(String[] args) {
 		/*  Test Case 1 */
-		int a[][] = { { 1, 2, 3, 4 },
+		/* int a[][] = { { 1, 2, 3, 4 },
 				{ 5, 6, 7, 8 },
 				{ 9, 10, 11, 12 },
 				{ 13, 14, 15, 16 } };
+		*/
+		int asterisk[][] = {
+			{ 0, 0, 0, 0, 1},
+			{ 0, 1, 0, 0, 0},
+			{ 0, 0, 0, 0, 0},
+			{ 0, 0, 1, 0, 0},
+			{ 0, 0, 0, 0, 0}
+		};		
 
 		/*  Test Case 2 */
 		/*
@@ -121,7 +130,14 @@ class TwoDArrayMatrixRotation {
 		 * {7, 8, 9}
 		 * };
 		 */
-		rotateMatrix(R, C, a);
-
+		for (int i=0;i<20;i++){
+			try {
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} 
+			rotateMatrix(R, C, asterisk);
+		}
 	}
 }
