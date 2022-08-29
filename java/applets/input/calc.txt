@@ -1,0 +1,2 @@
+Enter two numbers to be multiplied.
+Num1 x Num2 is: 35
