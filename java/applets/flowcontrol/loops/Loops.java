@@ -40,6 +40,7 @@ public class Loops {
         // <Integer> means this is a parameterized collection.
         // This means it holds Integer objects.
         ArrayList<Integer> cardsList = new ArrayList<Integer>();
+        // List is a collection type or data structure
         System.out.println("Building ArrayList...");
         // index is created implicitly and is not visible
         for(int c:cards){ // for each card loop where c is the value, not index
@@ -48,6 +49,7 @@ public class Loops {
         System.out.println("\n");
 
         System.out.println("Iterator While Loop");
+        // Iterator is a design pattern
         Iterator<Integer> cardsIterator = cardsList.iterator();
 
 
@@ -67,9 +69,11 @@ public class Loops {
          */
         cardsList.forEach(card -> System.out.print(" "+card));  
 
-
-
-
+        System.out.println("\nLoop using a float variable.");
+        // also works with f++ for whole numbers
+        for(float f=0.0f;f<10.0;f=f+0.1f){
+            System.out.printf("%2.1f\n",f);
+        }
     }
     public int random(int largest, boolean zero){
         int randomNum = (int)(Math.random()*largest);
@@ -80,4 +84,7 @@ public class Loops {
     public static void main(String args[]){
         new Loops();
     }
+
+    
+
 }
