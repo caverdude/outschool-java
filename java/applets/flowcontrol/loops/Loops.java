@@ -5,12 +5,15 @@ public class Loops {
     public Loops() {
         int[] cards=new int[52];
         System.out.println("Building card deck...");
+
+        // i is defined in loop scope
         for (int i = 0; i < 52; i++) {
             cards[i]=random(52,false);
         }
         System.out.println("For Loop");
-        
-        int i=0;
+        // can initialize I here external to the loop but it's
+        // in method scope not loop scope
+        int i=0; 
         for (; i < 52; i++) {
             System.out.print(" "+cards[i]);
         }
@@ -22,7 +25,7 @@ public class Loops {
         }
         System.out.println("\n");
         System.out.println("While Loop");
-        i=0; // initialize counter
+        i=0; // initialize counter again
         while(i<52){
             //use current counter value the increment it
             System.out.print(" "+cards[i++]); 
@@ -31,7 +34,7 @@ public class Loops {
         System.out.println("\n");
 
         System.out.println("Do While Loop");
-        i=0;
+        i=0; // initialize i one more time
         // not the best example of a use of do while loop
         do{ // loop is executed at least once
             System.out.print(" "+cards[i++]);
@@ -75,6 +78,8 @@ public class Loops {
             System.out.printf("%2.1f\n",f);
         }
     }
+
+    // see borrowed from Random examples class
     public int random(int largest, boolean zero){
         int randomNum = (int)(Math.random()*largest);
         if(zero)return randomNum;
