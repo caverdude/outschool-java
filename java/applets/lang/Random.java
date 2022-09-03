@@ -10,7 +10,7 @@ public class Random {
         System.out.println("Random Number Less than 0.00: "+(int)(100*.0012334855673558));
         System.out.println("Random two Die role is: "+random(6,false)+
                                                  " "+random(6,false));
-        System.out.println("Random Roulette spin is: "+random(37,true));
+        System.out.println("Random Roulette spin is: "+random(38,true));
         System.out.println("Random Card pulled from deck(No Jokers) is: "+random(52,false));
         System.out.println("Random Card pulled from deck(With Jokers) is: "+random(54,false));
         System.out.println("Random dollar ammount: $"+String.format("%3.2f",randomDollar(100, true)));
@@ -23,7 +23,7 @@ public class Random {
         return randomNum+1;
     }
     public double randomDollar(int largest, boolean change){
-        //cast to int rounds decimal part to 0, it's then stored in a double
+        //cast to int drops decimal part to 0, it's then stored in a double
         //+1 means whole dollar number, so if you use 50 your highest is 50 not 49
         //cast to double is needed because it will think we are doing interger
         // division without the cast
