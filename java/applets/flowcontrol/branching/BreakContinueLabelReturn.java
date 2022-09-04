@@ -1,5 +1,18 @@
 public class BreakContinueLabelReturn {
-    
+    public void aMethod(){
+        // does not need a reurn statement 
+        if (true) return;
+        // error unreachable code.
+        //int i=0;
+
+    }
+
+    public int aMethod2(){
+        // must have a reurn statement 
+        boolean a=true;
+        if (a) return 0;
+        return 1;
+    }
     BreakContinueLabelReturn(){
         System.out.println("Break example");
         int i;

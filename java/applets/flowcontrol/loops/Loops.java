@@ -56,24 +56,25 @@ public class Loops {
 
         // i is defined in loop scope
         for (int i = 0; i < 52; i++) {
-            cardsID[i]=random(52,false);
+            cardsID[i]=random(52,true);
         }
-        System.out.println("For Loop");
+        
         // can initialize I here external to the loop but it's
         // in method scope not loop scope
-        System.out.println("First Name of cards.");
+        System.out.println("\nFirst Name of cards.");
         for (int i=0; i < 52; i++) {
             System.out.print(" "+cards[cardsID[i]]);
         }
-        System.out.println("Next four examples of cardID.");
+        System.out.println("For Loop");
+        System.out.println("\n\nNext four examples of cardID.");
         for (int i=0; i < 52; i++) {
             System.out.print(" "+cardsID[i]);
         }
         System.out.println("\n");
         System.out.println("For Each Loop");
         // c is incremented implicitly, it stops at end of array length.
-        for(int c:cardsID){ // for each card loop
-            System.out.print(" "+c);
+        for(int card:cardsID){ // for each card loop
+            System.out.print(" "+card);
         }
         System.out.println("\n");
         System.out.println("While Loop");
