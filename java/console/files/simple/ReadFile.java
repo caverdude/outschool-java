@@ -12,7 +12,9 @@ public class ReadFile {
         if(args.length==2)
             if(args[1].equals("utf8")) utf8=true;
         //creating File instance to reference text file in Java
+        System.out.println("args[0]"+args[0]);
         File text = new File(args[0]);
+        System.out.println("file:"+text.toString());
         //Creating Scanner instance to read File in Java
         Scanner sc=null;
         if(utf8){
