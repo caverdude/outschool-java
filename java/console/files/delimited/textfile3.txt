@@ -1,0 +1,3 @@
+10/02/18|Coke Vending|1.75|0|false
+10/03/18|Steak Meal|17.52|0|false
+10/04/18|Gas for Van|54.13|0|false

@@ -1,0 +1,5 @@
+birth=01/08/18
+name=Larry the Wizard
+level=13
+wealth=120.97
+magic=true
