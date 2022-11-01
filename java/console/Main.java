@@ -1,33 +1,34 @@
 public class Main {
 
     public static void main(String[] args) {
-        Assignment test = new Assignment(3);
-        System.out.println(test.name);
-        System.out.println(test.count);
-        Assignment test2 = new Assignment("hi");
-        System.out.println(test2.name);
-        System.out.println(test2.count);
-        Assignment test3 = new Assignment();
-        System.out.println(test3.name);
-        System.out.println(test3.count);
+        Assignment test = new Assignment();
+
+        System.out.println(test.assignment("Hi"));
+        System.out.println(test.assignment(3));
+        test.assignment();
+        
     }
 
 }
 
 class Assignment {
-    int count;
-    String name;
+    
+
+    public Assignment(){
+
+    }
 
 
-    public Assignment() {
+    public void assignment() {
+        System.out.println("Did not return anything.");
         return;
     }
-    public Assignment(String newName){
-        name = newName;
+    public String assignment(String newName){
+       
+        return newName;
     }
-    public Assignment(int newNum){
-        count = newNum;
+    public int assignment(int newNum){
+        
+        return newNum;
     }
-} class Main {
-    
-}
+} 
