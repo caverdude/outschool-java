@@ -1,5 +1,6 @@
 import java.util.Scanner;
-
+import java.io.IOException;
+import java.io.*;
 public class Exam{
     private void showMenu(){
         System.out.println("\n1 Build Question");
@@ -11,15 +12,33 @@ public class Exam{
     }
     Question aQuestion = new Question();
     private void saveQuestion(){
-
+      try{        
+        FileWriter fw = new FileWriter("question.txt");
+     
+        fw.write(aQuestion.toString());
+     
+        fw.close();
+        } catch (IOException ioe){
+            ioe.printStackTrace();
+        }
     }
+    
     private void loadQuestion(){
-
+        try{        
+            FileReader fr = new FileReader("question.txt");
+         
+            fw.(aQuestion.toString());
+         
+            fw.close();
+            } catch (IOException ioe){
+                ioe.printStackTrace();
+            }
     }
     private void buildQuestion(){
 
 
         System.out.println("Enter Question text");
+        consoleInput.nextLine();
         aQuestion.question = consoleInput.nextLine();
         System.out.println("Enter Answer 1 text");
         aQuestion.answer1 = consoleInput.nextLine();
@@ -84,7 +103,7 @@ public class Exam{
             } else if (response == 2){
                 showQuestion();
             } else if (response == 3){
-                //saveQuestion();
+                saveQuestion();
             } else if (response == 4){
                 //loadQuestion();
             } else if (response == 5){

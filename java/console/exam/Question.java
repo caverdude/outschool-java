@@ -27,4 +27,17 @@ public class Question{
             score4 = true;
         }
     }
+    public String toString(){
+        String aString = question+"\n" + answer1+"\n"+answer2+"\n"+answer3+"\n"+answer4+"\n"+score1+"\n"+score2+"\n"+score3+"\n"+score4+"\n";
+        System.out.println(""+question);
+        System.out.println(""+answer1);
+        System.out.println(""+answer2);
+        System.out.println(""+answer3);
+        System.out.println(""+answer4);
+        System.out.println(""+score1);
+        System.out.println(""+score2);
+        System.out.println(""+score3);
+        System.out.println(""+score4);
+        return aString;
+    }
 }
