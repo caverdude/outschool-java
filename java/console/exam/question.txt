@@ -1,9 +1,9 @@
-tete
-tcttf
-jhjhjhj
-erererer
-vvbvbvbvbvb
-false
+Which is a Java Interface?
+CompareTo
+Comparable
+Integer
+Number
 false
 true
+false
 false

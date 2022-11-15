@@ -1,4 +1,4 @@
-public class Question{
+public class Question implements Questions{
     public String question;
     public String answer1;
     public String answer2;
@@ -11,21 +11,16 @@ public class Question{
     public Question(){
 
     }
-    public Question(String question, String answer1, String answer2, String answer3, String answer4, int score){
+    public Question(String question, String answer1, String answer2, String answer3, String answer4, boolean[] score){
         this.question = question;
         this.answer1 = answer1;
         this.answer2 = answer2;
         this.answer3 = answer3;
         this.answer4 = answer4;
-        if (score == 1){
-            score1 = true;
-        } else if (score == 2){
-            score2 = true;
-        } else if (score == 3){
-            score3 = true;
-        } else if (score == 4){
-            score4 = true;
-        }
+        this.score1=score[0];
+        this.score2=score[1];
+        this.score2=score[2];
+        this.score2=score[3];
     }
     public String toString(){
         String aString = question+"\n" + answer1+"\n"+answer2+"\n"+answer3+"\n"+answer4+"\n"+score1+"\n"+score2+"\n"+score3+"\n"+score4+"\n";
@@ -39,5 +34,21 @@ public class Question{
         System.out.println(""+score3);
         System.out.println(""+score4);
         return aString;
+    }
+    @Override
+    public int correctAnswer() {
+        if (score1 == true){
+            return 1;
+        } 
+        if (score2 == true){
+           return 2;
+        }
+        if (score3 == true){
+            return 3;
+        }
+        if (score4 == true){
+           return 4;
+        }
+        return 0;
     }
 }
