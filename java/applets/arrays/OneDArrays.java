@@ -22,7 +22,9 @@ public class OneDArrays extends JApplet {
     final int URANUS = 6;
     final int NEPTUNE = 7;
     final int PLUTO = 8;
-    final int ICON_SIZE = Integer.valueOf(getParameter("IconSize"));
+    //final int ICON_SIZE = Integer.valueOf(getParameter("IconSize"));
+    // getParaeter not working right in applet viewer.
+    final int ICON_SIZE = Integer.valueOf("75");
     final String SPACE3 = "   ";
     String[] planets = { "Mercury", "Venus", "Earth", "Mars", "Jupitor", "Saturn", "Uranus", "Neptune", "Pluto" };
 
@@ -51,23 +53,23 @@ public class OneDArrays extends JApplet {
                     // jLabelYourCompanyLogo.setIcon(iconLogo);
                     /*TODO: Make images smaller or resizable when frame of applet is stretched */
                     
-                    ImageIcon mercuryIcon  = createImageIcon("mercury.png",    "Planet Mercury");
+                    ImageIcon mercuryIcon  = createImageIcon("planets/mercury.png",    "Planet Mercury");
                     mercuryIcon = new ImageIcon(mercuryIcon.getImage().getScaledInstance(ICON_SIZE, ICON_SIZE, Image.SCALE_DEFAULT));
-                    ImageIcon venusIcon  = createImageIcon("venus.png",    "Planet Venus");
+                    ImageIcon venusIcon  = createImageIcon("planets/venus.png",    "Planet Venus");
                     venusIcon = new ImageIcon(venusIcon.getImage().getScaledInstance(ICON_SIZE, ICON_SIZE, Image.SCALE_DEFAULT));
-                    ImageIcon earthIcon  = createImageIcon("earth.png",    "Planet Earth");
+                    ImageIcon earthIcon  = createImageIcon("planets/earth.png",    "Planet Earth");
                     earthIcon = new ImageIcon(earthIcon.getImage().getScaledInstance(ICON_SIZE, ICON_SIZE, Image.SCALE_DEFAULT));
-                    ImageIcon marsIcon  = createImageIcon("mars.png",    "Planet Mars");
+                    ImageIcon marsIcon  = createImageIcon("planets/mars.png",    "Planet Mars");
                     marsIcon = new ImageIcon(marsIcon.getImage().getScaledInstance(ICON_SIZE, ICON_SIZE, Image.SCALE_DEFAULT));
-                    ImageIcon jupiterIcon  = createImageIcon("jupiter.jpg",    "Planet Jupiter");
+                    ImageIcon jupiterIcon  = createImageIcon("planets/jupiter.jpg",    "Planet Jupiter");
                     jupiterIcon = new ImageIcon(jupiterIcon.getImage().getScaledInstance(ICON_SIZE, ICON_SIZE, Image.SCALE_DEFAULT));
-                    ImageIcon saturnIcon  = createImageIcon("saturn.jpg",    "Planet Saturn");
+                    ImageIcon saturnIcon  = createImageIcon("planets/saturn.jpg",    "Planet Saturn");
                     saturnIcon = new ImageIcon(saturnIcon.getImage().getScaledInstance(ICON_SIZE, ICON_SIZE, Image.SCALE_DEFAULT));
-                    ImageIcon uranusIcon  = createImageIcon("uranus.jpg",    "Planet Uranus");
+                    ImageIcon uranusIcon  = createImageIcon("planets/uranus.jpg",    "Planet Uranus");
                     uranusIcon = new ImageIcon(uranusIcon.getImage().getScaledInstance(ICON_SIZE, ICON_SIZE, Image.SCALE_DEFAULT));
-                    ImageIcon neptuneIcon  = createImageIcon("neptune.jpg",    "Planet Neptune");
+                    ImageIcon neptuneIcon  = createImageIcon("planets/neptune.jpg",    "Planet Neptune");
                     neptuneIcon = new ImageIcon(neptuneIcon.getImage().getScaledInstance(ICON_SIZE, ICON_SIZE, Image.SCALE_DEFAULT));
-                    ImageIcon plutoIcon  = createImageIcon("pluto.jpg",    "Planet Pluto");
+                    ImageIcon plutoIcon  = createImageIcon("planets/pluto.jpg",    "Planet Pluto");
                     plutoIcon = new ImageIcon(plutoIcon.getImage().getScaledInstance(ICON_SIZE, ICON_SIZE, Image.SCALE_DEFAULT));
                     JLabel imageLabel1 = new JLabel();
                     imageLabel1.setIcon(mercuryIcon);
