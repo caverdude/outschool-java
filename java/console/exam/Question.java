@@ -1,4 +1,14 @@
-public class Question implements Questions{
+import java.util.ArrayList;
+
+public abstract class Question implements Questions{
+    private static ArrayList<String> types = new ArrayList<String>();
+    public static String[] getQuestionTypes(){
+        return (String[]) types.toArray();
+    }
+    public static void registerQuestionType(String type){
+        types.add(type);
+    }
+
     public String question;
     public String answer1;
     public String answer2;

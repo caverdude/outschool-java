@@ -1,4 +1,9 @@
 public interface Questions {
-    public int NUMBER_OF_QUESTIONS=4;
-    public int correctAnswer();
+    
+    int getNumberOfAnswers();
+    void setNumberOfAnswers(int numberOfAnswers);
+    int getCorrectAnswer();
+    boolean isAnswerNumberCorrect(int answerNumber);
+    boolean isMoreThanAnswerCorrect();
+
 }

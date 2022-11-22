@@ -1,9 +1,18 @@
-Which is a Java Interface?
-CompareTo
-Comparable
-Integer
-Number
+[question]
+This is a question
+[type]
+short
+[answer]
+Bla1
+false
+[answer]
+Answer 2
+[answer]
+no
+false
+[answer]
+Hello
 false
 true
-false
+true
 false
