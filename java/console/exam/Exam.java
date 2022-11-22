@@ -15,7 +15,7 @@ public class Exam{
     private void takeExam(){
 
     }
-    Question aQuestion = new Question();
+    Question aQuestion = new MultiOptionQuestion();
     private void saveQuestion(){
       try{        
         FileWriter fw = new FileWriter("question.txt");
@@ -38,13 +38,13 @@ public class Exam{
             while((qline=bfr.readLine())!=null){
                 qarray[c++]=qline;
             };
-            aQuestion.question=qarray[0];
-            aQuestion.answer1=qarray[1];
+            aQuestion.setQuestion(qarray[0]);
+            aQuestion.setAnswer1(qarray[1]);
             aQuestion.answer2=qarray[2];
             aQuestion.answer3=qarray[3];
             aQuestion.answer4=qarray[4];
 
-            aQuestion.score1=Boolean.parseBoolean(qarray[5]);
+            aQuestion.setScore1(Boolean.parseBoolean(qarray[5]));
             aQuestion.score2=Boolean.parseBoolean(qarray[6]);
             aQuestion.score3=Boolean.parseBoolean(qarray[7]);
             aQuestion.score4=Boolean.parseBoolean(qarray[8]);
@@ -60,9 +60,9 @@ public class Exam{
 
         System.out.println("Enter Question text");
         consoleInput.nextLine();
-        aQuestion.question = consoleInput.nextLine();
+        aQuestion.setQuestion(consoleInput.nextLine());
         System.out.println("Enter Answer 1 text");
-        aQuestion.answer1 = consoleInput.nextLine();
+        aQuestion.setAnswer1(consoleInput.nextLine());
         System.out.println("Enter Answer 2 text");
         aQuestion.answer2 = consoleInput.nextLine();
         System.out.println("Enter Answer 3 text");
@@ -74,13 +74,13 @@ public class Exam{
         correctAnswer = consoleInput.nextInt();
 
         if (correctAnswer == 1){
-            aQuestion.score1 = true;
+            aQuestion.setScore1(true);
         } else if (correctAnswer == 2){
-            aQuestion.score2 = true;
+            aQuestion.setScore2(true);
         } else if (correctAnswer == 3){
-            aQuestion.score3 = true;
+            aQuestion.setScore2(true);
         } else if (correctAnswer == 4){
-            aQuestion.score4 = true;
+            aQuestion.setScore2(true);
         }
     }
     public static void writeFile2() throws IOException {
