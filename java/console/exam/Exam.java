@@ -40,14 +40,14 @@ public class Exam{
             };
             aQuestion.setQuestion(qarray[0]);
             aQuestion.setAnswer1(qarray[1]);
-            aQuestion.answer2=qarray[2];
-            aQuestion.answer3=qarray[3];
-            aQuestion.answer4=qarray[4];
+            aQuestion.setAnswer2(qarray[2]);
+            aQuestion.setAnswer3(qarray[3]);
+            aQuestion.setAnswer4(qarray[4]);
 
             aQuestion.setScore1(Boolean.parseBoolean(qarray[5]));
-            aQuestion.score2=Boolean.parseBoolean(qarray[6]);
-            aQuestion.score3=Boolean.parseBoolean(qarray[7]);
-            aQuestion.score4=Boolean.parseBoolean(qarray[8]);
+            aQuestion.setScore2(Boolean.parseBoolean(qarray[6]));
+            aQuestion.setScore3(Boolean.parseBoolean(qarray[7]));
+            aQuestion.setScore4(Boolean.parseBoolean(qarray[8]));
 
             System.out.print(""+aQuestion.toString());
 
@@ -64,11 +64,11 @@ public class Exam{
         System.out.println("Enter Answer 1 text");
         aQuestion.setAnswer1(consoleInput.nextLine());
         System.out.println("Enter Answer 2 text");
-        aQuestion.answer2 = consoleInput.nextLine();
+        aQuestion.setAnswer2(consoleInput.nextLine());
         System.out.println("Enter Answer 3 text");
-        aQuestion.answer3 = consoleInput.nextLine();
+        aQuestion.setAnswer3(consoleInput.nextLine());
         System.out.println("Enter Answer 4 text");
-        aQuestion.answer4 = consoleInput.nextLine();
+        aQuestion.setAnswer4(consoleInput.nextLine());
         System.out.println("Which answer is correct?");
         int correctAnswer = 0;
         correctAnswer = consoleInput.nextInt();
@@ -94,14 +94,7 @@ public class Exam{
     }
     private void showQuestion(){
         
-        System.out.println("" + aQuestion.question);
-        System.out.println("" + aQuestion.answer1);
-        System.out.println("" + aQuestion.answer2);
-        System.out.println("" + aQuestion.answer3);
-        System.out.println("" + aQuestion.answer4);
-        int correctAnswer = aQuestion.correctAnswer();
-        
-        System.out.println("Answer "+correctAnswer+" is correct.");
+        System.out.println(""+aQuestion.toString());
         
     }
     private Scanner consoleInput = new Scanner(System.in);

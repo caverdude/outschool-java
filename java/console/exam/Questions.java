@@ -4,6 +4,6 @@ interface Questions {
     void setNumberOfAnswers(int numberOfAnswers);
     int getCorrectAnswer();
     boolean isAnswerNumberCorrect(int answerNumber);
-    boolean isMoreThanAnswerCorrect();
+    boolean isMoreThanOneAnswerCorrect();
 
 }
