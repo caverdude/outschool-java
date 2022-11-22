@@ -1,20 +1,19 @@
 [question]
-This is a question
-[id]
-aldkj-aldjkl-alkj
-[type]
-short
+What color is the sky?
 [answer]
-Bla1
+orange
+[answer]
+purple
+[answer]
+blue
+[answer]
+red
+[answer]
 false
-[answer]
-Answer 2
-[answer]
-no
-false
-[answer]
-Hello
-false
+[score]
 true
-true
+[score]
 false
+[score]
+false
+[score]
