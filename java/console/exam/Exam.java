@@ -97,7 +97,9 @@ public class Exam{
         System.out.println(""+aQuestion.toString());
         
     }
+    
     private Scanner consoleInput = new Scanner(System.in);
+
     public Exam(){
         
         boolean quit = false;
