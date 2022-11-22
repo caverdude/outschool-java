@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public abstract class Question implements Questions{
+abstract class Question implements Questions{
     private static ArrayList<String> types = new ArrayList<String>();
     public static String[] getQuestionTypes(){
         return (String[]) types.toArray();

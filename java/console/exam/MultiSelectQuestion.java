@@ -1,3 +1,3 @@
-public class MultiSelectQuestion extends Question {
+public class MultiSelectQuestion extends MultipleChoiceQuestion {
     
 }

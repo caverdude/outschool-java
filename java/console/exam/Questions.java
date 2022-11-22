@@ -1,4 +1,4 @@
-public interface Questions {
+interface Questions {
     
     int getNumberOfAnswers();
     void setNumberOfAnswers(int numberOfAnswers);
