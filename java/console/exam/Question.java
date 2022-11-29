@@ -88,7 +88,7 @@ public abstract class Question implements Questions{
         this.score2=score[3];
     }
     public String toString(){
-        String aString = question+"\n" + answer1+"\n"+answer2+"\n"+answer3+"\n"+answer4+"\n"+score1+"\n"+score2+"\n"+score3+"\n"+score4+"\n";
+        String aString = "[question]\n"+question+"\n[answer]\n" + answer1+"\n[answer]\n"+answer2+"\n[answer]\n"+answer3+"\n[answer]\n"+answer4+"\n[answer]\n"+score1+"\n[score]\n"+score2+"\n[score]\n"+score3+"\n[score]\n"+score4+"\n[score]\n";
         System.out.println("[question]\n"+question);
         System.out.println("[answer]\n"+answer1);
         System.out.println("[answer]\n"+answer2);
