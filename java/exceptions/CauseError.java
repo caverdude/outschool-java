@@ -26,7 +26,7 @@ public class CauseError {
             // try a custom text message
             //System.out.println("Stack Overflow Error!!!!! Program halted.");
             // try GUI message box
-            //JOptionPane.showMessageDialog(null, "Stack Overflow Error!!!!! Program halted.");
+            JOptionPane.showMessageDialog(null, "Stack Overflow Error!!!!! Program halted.");
         }
     }
 }

@@ -11,11 +11,13 @@ public class JavaProperties {
             // rename this .txt or .prop to see the issues
             properties.load(new FileReader("properties.prop"));
 
-        }catch(FileNotFoundException fnfe){
-            fnfe.printStackTrace();
-        }catch(IOException ioe){
-            ioe.printStackTrace();
-        }catch(Exception e){
+        }//catch(FileNotFoundException fnfe){
+            //fnfe.printStackTrace();
+        //}
+        //}catch(IOException ioe){
+        //    ioe.printStackTrace();
+        //}
+        catch(Exception e){
             e.printStackTrace();
         } // more general exceptions last.
 

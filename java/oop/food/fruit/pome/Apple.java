@@ -1,5 +1,5 @@
 package food.fruit.pome;
 
-public class Applet {
+public class Apple {
     
 }

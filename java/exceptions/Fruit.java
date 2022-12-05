@@ -1,4 +1,4 @@
-package food.fruit;
+
 import java.awt.Color;
 
 public interface Fruit {

@@ -1,5 +1,3 @@
-package food.fruit;
-
 import java.awt.Color;
 
 public abstract class GeneralFruit extends Food implements Fruit{
