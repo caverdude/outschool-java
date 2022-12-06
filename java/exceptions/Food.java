@@ -1,5 +1,5 @@
 
 
-public class Food {
+public interface Food {
     
 }

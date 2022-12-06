@@ -1,7 +1,7 @@
 
 import java.awt.Color;
 
-public interface Fruit {
+public interface Fruit extends Food{
     Color RED_FRUIT=Color.RED;
     Color YELLOW_FRUIT=Color.YELLOW;
     Color BLUE_FRUIT=Color.BLUE;

@@ -1,6 +1,6 @@
 import java.awt.Color;
 
-public abstract class GeneralFruit extends Food implements Fruit{
+public abstract class GeneralFruit implements Fruit{
     
     private Color fruitColor;
     public void setColor(Color color){
